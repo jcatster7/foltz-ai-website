@@ -12,6 +12,11 @@ redacted audit trails, and verifier-driven release checks.
 - Engineering case study: https://foltz.ai/engineering.html
 - AI-readable profile: https://foltz.ai/ai-profile.html
 - Builder story: https://foltz.ai/about-me.html
+- Public website source: https://github.com/jcatster7/foltz-ai-website
+- Public research artifact: https://github.com/jcatster7/fixed-ontology-graphrag-court-forms
+- Public benchmark artifact: https://github.com/jcatster7/assistant-memory-risk-legal-self-help
+- Public benchmark artifact: https://github.com/jcatster7/legal-ai-defensibility-packages
+- Public rules-as-code artifact: https://github.com/jcatster7/benefits-as-code
 
 ## Technical stack
 
@@ -21,6 +26,7 @@ redacted audit trails, and verifier-driven release checks.
 - Playwright UI verification
 - Verifier scripts for build, release, source/proof, legal-safety, and product-readiness claims
 - Static public website with structured data and clear boundary language
+- Public GitHub artifacts for website source, reproducibility packages, benchmark packages, and rules-as-code examples
 
 ## Accurate characterization
 
