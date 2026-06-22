@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Case Study - Foltz.ai</title>
+    <meta name="description"
+        content="Engineering case study for Foltz.ai: a local-first legal AI desktop and web system built by Justin Monk with Tauri, TypeScript, Rust, Playwright, source/proof gates, and verifier-driven release checks.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://foltz.ai/engineering.html">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d4a04a' stroke-width='2'><path d='M12 3 2 7l10 5 10-5-10-5z'/><path d='M2 17l10 5 10-5'/><path d='M2 12l10 5 10-5'/></svg>">
+</head>
+
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">foltz<span>.ai</span></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#built">What I Built</a></li>
+                <li><a href="index.html#proof-receipts">Proof Receipts</a></li>
+                <li><a href="engineering.html">Engineering</a></li>
+                <li><a href="ai-profile.html">AI Profile</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+                <li><a href="mailto:hello@foltz.ai" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-hero engineering-hero">
+            <div class="page-hero-inner">
+                <div>
+                    <p class="page-hero-kicker">Engineering case study</p>
+                    <h1>How Foltz.ai is built.</h1>
+                    <p class="page-hero-subtitle">
+                        A local-first legal AI work system with a desktop app, browser frontend, court-form prep engine,
+                        source/proof legal-safety layer, redacted audit trails, and verifier-gated release discipline.
+                    </p>
+                </div>
+                <figure class="product-shot">
+                    <div class="product-shot-top">
+                        <span>Product surface</span>
+                        <strong>LOCAL</strong>
+                    </div>
+                    <img src="product-system-preview.png" alt="Foltz.ai Forms Workspace product screenshot">
+                    <figcaption>Real local app workspace captured from the current development build.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="hiw-section case-study-section">
+            <h2>The Problem</h2>
+            <p>
+                Legal AI demos often blur prompts, sources, output, and product claims into one answer box. That is
+                risky in law. Foltz separates the system into intake, classification, source attachment, deterministic
+                checks, local drafting, human review, export-only handoff, and refusal paths.
+            </p>
+
+            <div class="case-grid">
+                <article class="case-panel">
+                    <h3>Product goal</h3>
+                    <p>Prepare source-grounded legal work locally while refusing unsupported jurisdictions, missing
+                        facts, production filing, payment, service, court contact, and legal-result claims.</p>
+                </article>
+                <article class="case-panel">
+                    <h3>Engineering constraint</h3>
+                    <p>Make the user-facing flow rich enough to feel useful, but make every promotion claim depend on
+                        manifests, source/proof records, readback evidence, screenshots, and release verifiers.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="hiw-section case-study-section">
+            <h2>Architecture</h2>
+            <p>
+                The stack combines a TypeScript frontend, Tauri desktop packaging, Rust validation and workflow code,
+                local model governance, Playwright coverage, and verifier scripts that produce auditable evidence.
+            </p>
+
+            <div class="case-grid three">
+                <article class="case-panel">
+                    <h3>Interface layer</h3>
+                    <p>Assistant home, matter workspace, forms workspace, proof dashboard, and identity passport surfaces
+                        keep workflows visible instead of hiding state behind a single chat box.</p>
+                </article>
+                <article class="case-panel">
+                    <h3>Safety layer</h3>
+                    <p>Support labels, source freshness, proof spans, missing-fact gates, redacted event logs, and
+                        no-production boundaries prevent unsafe promotion.</p>
+                </article>
+                <article class="case-panel">
+                    <h3>Release layer</h3>
+                    <p>Build checks, type checks, focused verifiers, website audits, browser smoke tests, and product
+                        readiness gates make readiness a command output, not a vibe.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="hiw-section case-study-section">
+            <h2>Hard Technical Decisions</h2>
+            <div class="receipt-board">
+                <div class="receipt-row">
+                    <span>Local-first default</span>
+                    <strong>Privacy posture</strong>
+                    <em>Legal work often contains sensitive facts, so the product path favors local runtime and explicit optional integrations.</em>
+                </div>
+                <div class="receipt-row">
+                    <span>Verifier gates</span>
+                    <strong>Release discipline</strong>
+                    <em>Claims must map to commands and evidence artifacts instead of optimistic copy or unchecked demos.</em>
+                </div>
+                <div class="receipt-row">
+                    <span>Prep-only scope</span>
+                    <strong>Legal boundary</strong>
+                    <em>Foltz can prepare review drafts, but filing, service, payment, court contact, and legal advice stay blocked.</em>
+                </div>
+                <div class="receipt-row">
+                    <span>AI-readable static pages</span>
+                    <strong>Search clarity</strong>
+                    <em>Recruiters and AI chatbots can summarize the project accurately from static HTML and llms.txt.</em>
+                </div>
+            </div>
+        </section>
+
+        <section class="hiw-section case-study-section">
+            <h2>Verification Strategy</h2>
+            <p>
+                Foltz uses narrow proof commands for each claim. A green website is not allowed to imply public beta,
+                customer acceptance, legal approval, notarized distribution, production court/provider authority, or
+                legal outcome support.
+            </p>
+
+            <div class="family-grid">
+                <div class="family-panel">
+                    <div class="family-domain">Website</div>
+                    <h4>Public copy gate</h4>
+                    <p>Checks for generic AI residue, unsupported pitch claims, missing boundary language, and archived
+                        artifact labels.</p>
+                    <span class="family-status status-deployed">Verified locally</span>
+                </div>
+                <div class="family-panel">
+                    <div class="family-domain">Runtime</div>
+                    <h4>Build and type check</h4>
+                    <p>Production build and release TypeScript checks prove the frontend still compiles after product
+                        and website changes.</p>
+                    <span class="family-status status-deployed">Verified locally</span>
+                </div>
+                <div class="family-panel">
+                    <div class="family-domain">Readiness</div>
+                    <h4>Internal final gate</h4>
+                    <p>Final readiness passes internally but keeps public beta and pilot claims blocked until external
+                        evidence exists.</p>
+                    <span class="family-status status-training">External blockers explicit</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-banner" id="limitations">
+            <div class="section-inner">
+                <h2>What this does not claim.</h2>
+                <p>
+                    Foltz does not provide legal advice, create an attorney-client relationship, file documents, pay fees,
+                    serve parties, contact courts or agencies, or guarantee outcomes.
+                </p>
+                <div class="hero-actions">
+                    <a href="ai-profile.html" class="btn-primary">Read AI Profile</a>
+                    <a href="mailto:hello@foltz.ai" class="btn-secondary">Contact Justin</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-logo">foltz<span>.ai</span></a>
+                <p>Local-first legal AI engineering with source/proof, human review, and no-production boundaries.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Engineering</h4>
+                <a href="index.html#built">What I Built</a>
+                <a href="index.html#proof-receipts">Proof Receipts</a>
+                <a href="engineering.html">Case Study</a>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <a href="ai-profile.html">AI Profile</a>
+                <a href="index.html#limitations">Limitations</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="about-me.html">About Me</a>
+                <a href="mailto:hello@foltz.ai">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Foltz.ai. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

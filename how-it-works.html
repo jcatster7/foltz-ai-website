@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works — Foltz.ai</title>
+    <meta name="description"
+        content="How Foltz.ai's local-first legal AI research pipeline uses source records, deterministic checks, and human review boundaries.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://foltz.ai/how-it-works.html">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d4a04a' stroke-width='2'><path d='M12 3 2 7l10 5 10-5-10-5z'/><path d='M2 17l10 5 10-5'/><path d='M2 12l10 5 10-5'/></svg>">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">foltz<span>.ai</span></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#built">What I Built</a></li>
+                <li><a href="index.html#proof-receipts">Proof Receipts</a></li>
+                <li><a href="engineering.html">Engineering</a></li>
+                <li><a href="ai-profile.html">AI Profile</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+                <li><a href="mailto:hello@foltz.ai" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="page-hero process-hero">
+        <div class="page-hero-inner">
+            <div>
+                <p class="page-hero-kicker">How it works</p>
+            <h1>Research-grade <br>legal AI <br>with proof gates</h1>
+                <p class="page-hero-subtitle">Foltz.ai studies how local models, source records, deterministic rules, and
+                human review can prepare legal work without crossing into advice, filing, billing, service, or court
+                traffic.</p>
+            </div>
+            <div class="process-rail" aria-label="Research pipeline preview">
+                <div class="process-node">
+                    <span>01</span>
+                    <strong>Source record</strong>
+                    <em>attached</em>
+                </div>
+                <div class="process-node">
+                    <span>02</span>
+                    <strong>Fact checks</strong>
+                    <em>closed</em>
+                </div>
+                <div class="process-node">
+                    <span>03</span>
+                    <strong>Draft review</strong>
+                    <em>human</em>
+                </div>
+                <div class="process-node blocked">
+                    <span>04</span>
+                    <strong>Court submission</strong>
+                    <em>blocked</em>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hiw-section">
+
+        <div class="origin-callout">
+            <h3>Why a Research Pipeline?</h3>
+            <p>
+                Legal automation fails when claims, sources, and generated output blur together. Foltz.ai keeps those
+                layers separate: source records define the allowed evidence, deterministic rules check the workflow,
+                local models assist with extraction and drafting, and a human remains responsible for review.
+            </p>
+        </div>
+
+        <div class="origin-callout">
+            <h3>Why Separate Draft and Review?</h3>
+            <p>
+                A single generation pass is too easy to overtrust. Foltz.ai separates extraction, draft preparation,
+                deterministic validation, and final human review so each stage can fail closed and leave an audit trail
+                when facts, jurisdiction, source coverage, or proof labels are missing.
+            </p>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         4-STEP PIPELINE
+         ═══════════════════════════════════════════════════════════════ -->
+    <div class="hiw-section">
+        <h2>The Pipeline</h2>
+        <p>Four stages describe the current research workflow. Product access, production filing, billing, service, and
+            court or agency submission are outside this site.</p>
+
+        <div class="pipeline-steps">
+            <div class="pipeline-step">
+                <div class="step-num">1</div>
+                <h4>Gather Facts</h4>
+                <p>Inputs are reduced to structured facts, declared jurisdiction, matter type, and missing-information
+                    flags before any draft output is considered.</p>
+            </div>
+
+            <div class="pipeline-step">
+                <div class="step-num">2</div>
+                <h4>Attach Sources</h4>
+                <p>Claims and form fields must tie back to source records, instructions, schemas, proof spans, or
+                    deterministic rules instead of unsupported model memory.</p>
+            </div>
+
+            <div class="pipeline-step">
+                <div class="step-num">3</div>
+                <h4>Run Gates</h4>
+                <p>Boundary checks block legal-advice claims, production filing behavior, unsupported jurisdictions,
+                    stale model IDs, and missing source evidence.</p>
+            </div>
+
+            <div class="pipeline-step">
+                <div class="step-num">4</div>
+                <h4>Review Draft</h4>
+                <p>The output remains a prep-only draft for qualified human review. Foltz.ai does not submit,
+                    serve, pay, contact courts, or guarantee outcomes.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         CAPABILITY LAYERS
+         ═══════════════════════════════════════════════════════════════ -->
+    <div class="hiw-section">
+        <h2>Capability Layers</h2>
+        <p>The public site focuses on research layers that can be audited: local model governance, form-prep gates,
+            and source/proof evidence. Product access and customer workflows remain gated separately.</p>
+
+        <div class="family-grid">
+            <div class="family-panel">
+                <div class="family-icon tone-accent">M</div>
+                <h4>Model Governance</h4>
+                <div class="family-domain">Controlled Identifiers</div>
+                <p>Public claims about local models are tied to the repo's model manifest and verification evidence,
+                    not informal names or stale benchmark copy.</p>
+                <span class="family-status status-deployed">Research evidence</span>
+            </div>
+
+            <div class="family-panel">
+                <div class="family-icon tone-success">F</div>
+                <h4>Form Preparation</h4>
+                <div class="family-domain">Prep-Only Outputs</div>
+                <p>California court-form work is promoted through fill-ready and support gates before public claims
+                    are made about supported preparation behavior.</p>
+                <span class="family-status status-deployed">Gated capability</span>
+            </div>
+
+            <div class="family-panel">
+                <div class="family-icon tone-info">B</div>
+                <h4>Boundary Guardrails</h4>
+                <div class="family-domain">No Production Filing</div>
+                <p>Provider traffic, court submission, service, billing, attorney-client claims, and legal advice are
+                    excluded from public research demonstrations.</p>
+                <span class="family-status status-training">Boundary enforced</span>
+            </div>
+
+
+        </div>
+
+        <!-- Privacy Callout -->
+        <div class="privacy-callout">
+            <h3>Local-First Research</h3>
+            <p>Foltz.ai prioritizes local processing and no-network verifier gates for legal workflows. Exact runtime
+                behavior depends on the build and enabled integrations, so production use remains gated outside the
+                public website.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-logo">foltz<span>.ai</span></a>
+                <p>Local-first legal AI research with source-proof gates, human review, and no production filing from
+                    the public site.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Engineering</h4>
+                <a href="index.html#built">What I Built</a>
+                <a href="index.html#proof-receipts">Proof Receipts</a>
+                <a href="engineering.html">Case Study</a>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <a href="ai-profile.html">AI Profile</a>
+                <a href="index.html#limitations">Limitations</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="about-me.html">About Me</a>
+                <a href="mailto:hello@foltz.ai">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Foltz.ai. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

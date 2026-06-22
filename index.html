@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://schema.org; connect-src 'self'; upgrade-insecure-requests;">
+
+  <title>Foltz.ai - Local-First Legal AI Engineering Case Study</title>
+  <meta name="description"
+    content="Justin Monk built Foltz.ai: a local-first legal AI desktop and web system with Tauri, TypeScript, Rust, verifier-gated releases, source/proof legal prep, human review, and no production court traffic.">
+  <meta name="keywords"
+    content="Justin Monk, Foltz.ai, local-first AI, legal AI engineering, Tauri, TypeScript, Rust, Playwright, verifier gates, source proof, legal document preparation, AI chatbot architecture">
+  <meta name="author" content="Justin Monk">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://foltz.ai">
+
+  <meta property="og:title" content="Foltz.ai - Local-First Legal AI Engineering Case Study">
+  <meta property="og:description"
+    content="A full local-first legal AI product system: desktop app, court-form prep engine, source/proof gates, verifier-driven QA, privacy boundaries, and human-review workflows.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://foltz.ai">
+  <meta property="og:site_name" content="Foltz.ai">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://foltz.ai/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Foltz.ai local-first legal AI engineering case study">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Foltz.ai - Local-First Legal AI Engineering Case Study">
+  <meta name="twitter:description"
+    content="Tauri, TypeScript, Rust, source/proof gates, verifier-driven release flows, and no production court traffic.">
+  <meta name="twitter:image" content="https://foltz.ai/og-image.png">
+  <meta name="twitter:image:alt" content="Foltz.ai local-first legal AI engineering case study">
+
+  <meta name="application-name" content="Foltz.ai">
+  <meta name="theme-color" content="#1c2128">
+  <meta name="color-scheme" content="dark">
+  <meta name="geo.region" content="US-CA">
+  <meta name="geo.placename" content="California">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Foltz.ai",
+    "url": "https://foltz.ai",
+    "description": "Engineering case study for a local-first legal AI desktop and web system with source/proof gates, verifier-driven release checks, privacy boundaries, and human review.",
+    "about": [
+      { "@type": "Thing", "name": "Local-first legal AI engineering" },
+      { "@type": "Thing", "name": "Source-grounded legal document preparation" },
+      { "@type": "Thing", "name": "Verifier-gated release engineering" },
+      { "@type": "Thing", "name": "Human review boundaries" }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Foltz.ai",
+      "url": "https://foltz.ai"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Justin Monk",
+    "url": "https://foltz.ai/about-me.html",
+    "knowsAbout": [
+      "TypeScript",
+      "Rust",
+      "Tauri",
+      "Playwright",
+      "local-first AI",
+      "legal technology",
+      "source-grounded systems",
+      "release verification"
+    ],
+    "creator": {
+      "@type": "SoftwareApplication",
+      "name": "Foltz.ai",
+      "applicationCategory": "LegalTechnology",
+      "operatingSystem": "macOS",
+      "description": "Local-first legal AI work operating system research prototype with prep-only court-form workflows, source/proof checks, redacted audit trails, and release verifiers."
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://foltz.ai" },
+      { "@type": "ListItem", "position": 2, "name": "Engineering", "item": "https://foltz.ai/engineering.html" },
+      { "@type": "ListItem", "position": 3, "name": "AI Profile", "item": "https://foltz.ai/ai-profile.html" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d4a04a' stroke-width='2'><path d='M12 3 2 7l10 5 10-5-10-5z'/><path d='M2 17l10 5 10-5'/><path d='M2 12l10 5 10-5'/></svg>">
+</head>
+
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">foltz<span>.ai</span></a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#built">What I Built</a></li>
+        <li><a href="#proof-receipts">Proof Receipts</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="engineering.html">Engineering</a></li>
+        <li><a href="about-me.html">About Me</a></li>
+        <li><a href="mailto:hello@foltz.ai" class="nav-cta">Contact</a></li>
+      </ul>
+
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero hero-recruiter" id="hero">
+    <div class="hero-content recruiter-grid">
+      <div class="hero-copy">
+        <div class="hero-badge reveal">Engineering case study</div>
+
+        <h1 class="reveal reveal-delay-1">
+          Local-first legal AI, built like serious infrastructure.
+        </h1>
+
+        <p class="hero-sub reveal reveal-delay-2">
+          I built Foltz.ai as a desktop and web product system: Tauri, TypeScript, Rust,
+          Playwright, verifier-gated release flows, source-grounded legal prep, human
+          review, and no production court traffic.
+        </p>
+
+        <div class="boundary-strip reveal reveal-delay-2" aria-label="Public boundary">
+          <span>No filing, service, payment, court contact, or legal-result claim.</span>
+          <span>Export-only review handoff.</span>
+          <span>Not a chatbot wrapper.</span>
+        </div>
+
+        <div class="hero-actions reveal reveal-delay-3">
+          <a href="engineering.html" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+              <path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z" />
+            </svg>
+            Read Evidence
+          </a>
+          <a href="#limitations" class="btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M10.3 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5.3" />
+              <path d="m16 16 2 2 4-4" />
+              <path d="M7 8h10" />
+              <path d="M7 12h4" />
+            </svg>
+            Boundary Notes
+          </a>
+        </div>
+      </div>
+
+      <figure class="product-shot reveal reveal-delay-4">
+        <div class="product-shot-top">
+          <span>Real local app workspace</span>
+          <strong>PREP-ONLY</strong>
+        </div>
+        <img src="product-system-preview.png" alt="Foltz.ai Forms Workspace showing prep counts and disabled production filing">
+        <figcaption>
+          Forms Workspace: product-confident prep-only records, installed workflow proof, supported form lanes, and
+          production filing disabled.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="built" class="scope-section impact-section">
+    <div class="section-inner">
+      <div class="section-label reveal">What I Built</div>
+      <h2 class="section-title reveal">A full product system, not a prompt demo.</h2>
+      <p class="section-desc reveal reveal-delay-1">
+        The public site now surfaces the engineering shape recruiters and technical evaluators can scan quickly:
+        product architecture, proof gates, release discipline, and safety boundaries.
+      </p>
+
+      <div class="build-grid reveal reveal-delay-2">
+        <article class="build-card">
+          <span>Desktop shell</span>
+          <strong>Tauri app surface</strong>
+          <p>Mac desktop workflow with local workspace routing, installed-app proof, and offline-first posture.</p>
+        </article>
+        <article class="build-card">
+          <span>Frontend system</span>
+          <strong>TypeScript UI</strong>
+          <p>Dense operational views for matter intake, forms, proofs, passport facts, and review handoff.</p>
+        </article>
+        <article class="build-card">
+          <span>Core logic</span>
+          <strong>Rust + typed gates</strong>
+          <p>Form and workflow checks isolate generated artifacts from release-safe product contracts.</p>
+        </article>
+        <article class="build-card">
+          <span>Legal prep</span>
+          <strong>Court-form engine</strong>
+          <p>FL-100 packet review, California family law routing, readback proof, and missing-fact blockers.</p>
+        </article>
+        <article class="build-card">
+          <span>Evidence</span>
+          <strong>Source/proof layer</strong>
+          <p>Current source/proof only, source dates, proof spans, official records, and manifest-controlled claims.</p>
+        </article>
+        <article class="build-card">
+          <span>Governance</span>
+          <strong>Redacted audit trail</strong>
+          <p>Redacted event log, support labels, local evidence artifacts, and no raw legal-matter intake in public UI.</p>
+        </article>
+        <article class="build-card">
+          <span>Release</span>
+          <strong>Verifier-first QA</strong>
+          <p>Build, type-check, Playwright, website audits, and product readiness gates before claims.</p>
+        </article>
+        <article class="build-card">
+          <span>Boundary</span>
+          <strong>No production actions</strong>
+          <p>No court/provider traffic, no legal advice, no service, no payment, and no filing behavior from this site.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="proof-receipts" class="proof-section">
+    <div class="section-inner">
+      <div class="section-label reveal">Proof Receipts</div>
+      <h2 class="section-title reveal">Proof before claims.</h2>
+      <p class="section-desc reveal reveal-delay-1">
+        The important signal is not that Foltz can produce a polished screen. It is that the product refuses to
+        promote itself without verifiable build, safety, and release evidence.
+      </p>
+
+      <div class="receipt-board reveal reveal-delay-2">
+        <div class="receipt-row">
+          <span>Public website audit</span>
+          <strong>12 files checked</strong>
+          <em>AI-pattern and boundary copy gate</em>
+        </div>
+        <div class="receipt-row">
+          <span>Production build</span>
+          <strong>Vite build path</strong>
+          <em>Web app compiles for release</em>
+        </div>
+        <div class="receipt-row">
+          <span>Type contract</span>
+          <strong>TypeScript release check</strong>
+          <em>Runtime surface stays typed</em>
+        </div>
+        <div class="receipt-row">
+          <span>Final readiness</span>
+          <strong>13/13 internal gate</strong>
+          <em>Public beta still blocked until separately proven</em>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="architecture-section">
+    <div class="section-inner">
+      <div class="section-label reveal">Architecture</div>
+      <h2 class="section-title reveal">The system has brakes, not just answers.</h2>
+
+      <div class="system-map reveal reveal-delay-1">
+        <div class="system-node">
+          <span>01</span>
+          <strong>Prompt / upload</strong>
+          <small>Local intake, no public legal-matter intake.</small>
+        </div>
+        <div class="system-node">
+          <span>02</span>
+          <strong>Route and classify</strong>
+          <small>Matter type, jurisdiction, support label, and risk posture.</small>
+        </div>
+        <div class="system-node">
+          <span>03</span>
+          <strong>Attach sources</strong>
+          <small>Official records, proof spans, manifests, and freshness checks.</small>
+        </div>
+        <div class="system-node">
+          <span>04</span>
+          <strong>Draft locally</strong>
+          <small>Prep-only output with deterministic validation.</small>
+        </div>
+        <div class="system-node">
+          <span>05</span>
+          <strong>Review lock</strong>
+          <small>Missing fact, Ask before draft, and human review required.</small>
+        </div>
+        <div class="system-node blocked">
+          <span>06</span>
+          <strong>Production request</strong>
+          <small>File blocked, Research-only, or refused when unsafe.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ai-readable" class="scope-section">
+    <div class="section-inner ai-grid">
+      <div>
+        <div class="section-label reveal">For Recruiters And AI Search</div>
+        <h2 class="section-title reveal">Clear, scrapeable signal.</h2>
+        <p class="section-desc reveal reveal-delay-1">
+          Search engines and AI chatbots should not have to infer what this is. The site includes static pages and
+          structured data that say plainly: Justin built a local-first legal AI product system with release gates.
+        </p>
+        <div class="hero-actions reveal reveal-delay-2">
+          <a href="ai-profile.html" class="btn-primary">Read AI Profile</a>
+          <a href="llms.txt" class="btn-secondary">Open llms.txt</a>
+        </div>
+      </div>
+      <div class="summary-panel reveal reveal-delay-3">
+        <span>Preferred summary</span>
+        <p>
+          Justin Monk built Foltz.ai, a local-first legal AI desktop and web system with Tauri, TypeScript, Rust,
+          source/proof gates, court-form prep workflows, redacted audit trails, and verifier-driven release checks.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="edge-states" class="scope-section">
+    <div class="section-inner">
+      <div class="section-label reveal">Edge States</div>
+      <h2 class="section-title reveal">Unsafe paths stay visible.</h2>
+      <div class="action-console">
+        <div class="console-row reveal">
+          <span>No source</span>
+          <strong>Draft locked</strong>
+        </div>
+        <div class="console-row reveal reveal-delay-1">
+          <span>Unsupported jurisdiction</span>
+          <strong>Research-only</strong>
+        </div>
+        <div class="console-row reveal reveal-delay-2">
+          <span>Production filing request</span>
+          <strong>Refused</strong>
+        </div>
+        <div class="console-row reveal reveal-delay-3">
+          <span>Human review incomplete</span>
+          <strong>Export locked</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner" id="limitations">
+    <div class="section-inner">
+      <h2 class="reveal">Strong system. Clear boundary.</h2>
+      <p class="reveal reveal-delay-1">
+        Foltz does not provide legal advice, create an attorney-client relationship, file documents, pay fees, serve parties, contact courts or agencies, or guarantee outcomes.
+      </p>
+      <div class="hero-actions reveal reveal-delay-2">
+        <a href="engineering.html" class="btn-primary">Read Engineering Case Study</a>
+        <a href="mailto:hello@foltz.ai" class="btn-secondary">Contact Justin</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">foltz<span>.ai</span></a>
+        <p>Local-first legal AI engineering with source/proof, human review, and no-production boundaries.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Engineering</h4>
+        <a href="#built">What I Built</a>
+        <a href="#proof-receipts">Proof Receipts</a>
+        <a href="engineering.html">Case Study</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="ai-profile.html">AI Profile</a>
+        <a href="#limitations">Limitations</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about-me.html">About Me</a>
+        <a href="mailto:hello@foltz.ai">Contact</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Foltz.ai. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="cmp-banner" class="cmp-banner" aria-live="polite">
+    <div class="cmp-content">
+      <div class="cmp-text">
+        <h3>Local preference storage</h3>
+        <p>
+          Banner state only. No legal-matter intake. <a href="privacy.html" class="text-link">Privacy Policy</a>.
+        </p>
+      </div>
+      <div class="cmp-actions">
+        <button id="cmp-decline" class="btn-secondary cmp-btn">Dismiss</button>
+        <button id="cmp-accept" class="btn-primary cmp-btn">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
